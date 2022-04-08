@@ -1,0 +1,60 @@
+
+.main{
+    height: 100vh; 
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.3);  
+    padding: 1cm;
+}
+h4{
+    color: blue;
+    margin-right:1.9cm;
+  }
+h5 {
+    
+    color: #00000091;  
+ }
+.sign {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    padding: 40px 0px 0px 0px;
+    margin-bottom: 0.5cm;
+    height: 0.5cm;
+    top: 0;
+}
+
+.button {
+    background-color: #4688f1;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px 35px;
+    height: 40px;
+    width: auto;
+    font-weight: 900;
+    margin-bottom: 3cm;
+
+}
+
+.text {
+    display: flex;
+    color: #3566b8;
+    padding: 0px 172px 0px 34px;
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 3cm;
+    margin-left: -1cm;
+    border-color: white;
+    background-color: white;
+    
+}
+
+.Fundoo-Text{
+    color: black;
+    opacity: 0.8;
+    text-align: center;
+    -webkit-text-stroke: thin;
+    margin-left: -20px;
+    margin-bottom: 0px;
+}
