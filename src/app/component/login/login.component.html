@@ -1,15 +1,15 @@
 <div class="main-name" fxLayout="column" fxLayoutAlign="center center">
-    <form [formGroup]="loginForm" (ngSubmit)="login">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="logo" fxLayout="column" fxLayoutAlign="center center">
             <div fxLayout="row">
-                    <div style="color: #4285F4;">F</div>
-                    <div style="color: #EA4335;">u</div>
-                    <div style="color: #FBBC05;">n</div>
-                    <div style="color: #4285F4;">d</div>
-                    <div style="color: #34A853;">o</div>
-                    <div style="color: #EB4E41;">o</div>
-                </div>
+                <div style="color: #4285F4;">F</div>
+                <div style="color: #EA4335;">u</div>
+                <div style="color: #FBBC05;">n</div>
+                <div style="color: #4285F4;">d</div>
+                <div style="color: #34A853;">o</div>
+                <div style="color: #EB4E41;">o</div>
             </div>
+        </div>
         <h1>Sign in</h1>
         <h4>to continue to Fundoo</h4>
         <div class="form-group">
@@ -42,8 +42,8 @@
                 <p routerLink="/registration">Create account</p>
             </div>
             <div class="button">
-                <button type="submit" (click)="login()" mat-raised-button color="primary"
-                    class="next-button">Next</button>
+                <button type="submit" (click)="onSubmit()" mat-raised-button color="primary"
+                    class="next-button" routerLink="/dashboard">Next</button>
             </div>
         </div>
     </form>

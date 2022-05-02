@@ -1,5 +1,5 @@
 <div class="main-container" fxLayoutAlign="center center">
-    <form [formGroup]="registerForm" (ngSubmit)="registrationform" >
+    <form [formGroup]="registerForm"  >
         <div class="main" fxLayout=flex;>
             <div>
                 <div fxLayout="row">
@@ -61,11 +61,13 @@
                 <section class="example-section">
                     <mat-checkbox class="example-margin">show Password</mat-checkbox>
 
+
+                    
                 </section>
                 <div class="sign">
                     <p class="text" routerLink="/login"> sign in instead </p>
 
-                    <button type="submit" (click)="registrationform()" mat-raised-button color="primary"
+                    <button type="submit" (click)="onSubmit()" mat-raised-button color="primary"
                         class="button">Next</button>
                 </div>
             </div>

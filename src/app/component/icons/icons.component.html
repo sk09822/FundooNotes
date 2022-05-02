@@ -1,0 +1,55 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+	<button mat-icon-button *ngIf=!isDeleted matTooltip="Remind me">
+		<img class="icons" src="./../../../assets/add_alert_black_24dp.svg" alt="add_alert">
+	</button>
+
+	<button mat-icon-button *ngIf=!isDeleted matTooltip="Collaorator">
+		<img class="icons" src="./../../../assets/person_add_alt_black_24dp.svg" alt="person_add_alt">
+	</button>
+
+
+	<div style="margin-bottom: -5px">
+		<button style="background-color: transparent;border: none;" [matMenuTriggerFor]="colorMenu" *ngIf=!isDeleted>
+			<img class="icons" src="./../../../assets/palette_black_24dp.svg" alt="palette">
+		</button>
+		<mat-menu #colorMenu="matMenu">
+			<button *ngFor="let noteColor of colors" mat-mini-fab [style.background]="noteColor?.bgColorValue"
+				(click)="changeColor(noteColor?.bgColorValue)">
+			</button>
+
+
+		</mat-menu>
+
+	</div>
+	<button mat-icon-button *ngIf=!isDeleted matTooltip="Add image">
+		<img class="icons" src="./../../../assets/image_black_24dp.svg" alt="image">
+	</button>
+
+	<button mat-icon-button (click)="onarchive()" *ngIf="!isArchived && !isDeleted">
+		<img class="icons" src="./../../../assets/archive_black_24dp.svg" alt="archive">
+	</button>
+	<button mat-icon-button (click)=' onunarchive()' *ngIf='isArchived && !isDeleted' matTooltip="Unarchive">
+		<img class="icons" src="./../../../assets/unarchive_black_24dp.svg" alt="Unarchive">
+	</button>
+
+
+	<button mat-icon-button  style="position: relative; right: 90px;" *ngIf=isDeleted matTooltip="Delete forever" matTooltipClass="tooltip"
+		(click)='ondeleteforever()'>
+		<img class="icons" src="./../../../assets/delete_forever_black_24dp (1).svg" alt="delete_forever">
+	</button>
+
+	<button mat-icon-button style="position: relative; right:170px;" *ngIf=isDeleted matTooltip="Restore" (click)="onrestore()" >
+		<img class="icons" src="./../../../assets/restore_from_trash_black_24dp.svg" alt="restore">
+	</button>
+		
+
+
+	<button mat-icon-button *ngIf=!isDeleted [matMenuTriggerFor]="menu" matTooltip="More" matTooltipClass="tooltip">
+		<mat-icon style="font-size: 20px; opacity: 0.71; position: relative; right: 19px;">more_vert</mat-icon>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="ondelete()">Delete note</button>
+
+
+		</mat-menu>
+	</button>
+</div>

@@ -1,0 +1,18 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  height        : fit-content;
+  width         : 274px;
+  min-height    : 125px;
+  max-height    : 750px;
+  padding       : 16px 16px 8px;
+  border        : 1px solid transparent;
+  border-radius : 9px;
+  border-width  : 1px;
+  margin-bottom : 20px;
+} 
+.textArea {
+  word-wrap    : break-word;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+}
